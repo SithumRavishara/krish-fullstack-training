@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Simple POS Application</title>
+</head>
+<body>
+    <h1>Simple POS App</h1>
+    <p>Customer ID
+        <input id="txtId">
+    </p>
+    <p>Customer Name
+        <input id="txtName">
+    </p>
+    <p>Customer Address
+        <input id="txtAddress">
+    </p>
+    <button id="btnSave">Save Customer</button>
+    <div id="output"></div>
+    <hr>
+    <p>
+        Search Customer : <input id="txtSearch">
+    </p>
+    <button id="btnSearch">Search</button>
+    <p>ID : <label id="lblId"></label></p>
+    <p>Name : <label id="lblName"></label></p>
+    <p>Address : <label id="lblAddress"></label></p>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $("#btnSave").click(function(){
+
+            var ajaxConfig = {
+                url:"http://localhost:8080/pos/customers",
+                method:"POST",
+                async: true,
+                data:{
+                    "id":$("#txtId").val(),
+                    "name":$("#txtName").val(),
+                    "address":$("#txtAddress").val()
+                }
+            }
+
+            $.ajax(ajaxConfig).done(function(response){
+                $("#output").html(`<h1>${response}</h1>`);
+            });
+
+        });
+
+        $("#btnSearch").click(function(){
+
+           var ajaxConfig = {
+               url:"http://localhost:8080/pos/customers",
+               method:"GET",
+               async: true,
+               data:{
+                   "id":$("#txtSearch").val()
+               }
+           };
+
+           $.ajax(ajaxConfig).done(function(response){
+              var customer = JSON.parse(response);
+              if (!$.isEmptyObject(customer)){
+                  $("#lblId").text(customer.id);
+                  $("#lblName").text(customer.name);
+                  $("#lblAddress").text(customer.address);
+              }else{
+                  $("#lblId").text("");
+                  $("#lblName").text("");
+                  $("#lblAddress").text("");
+              }
+           });
+
+        });
+
+    </script>
+</body>
+</html>
