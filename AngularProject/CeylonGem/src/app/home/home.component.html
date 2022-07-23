@@ -1,0 +1,23 @@
+<div id="container">
+  <div class="d-flex vh-100 justify-content-center">
+      <div class="row align-self-center">
+          <div class="card mr-5" style="width:400px">
+              <img class="card-img-top mt-5 icon" src="/assets/gemimg4.jpeg" alt="Card image">
+              <div class="card-body text-center">
+                  <h4 class="card-title">List All Gemstone</h4>
+                  <p class="card-text">List All gemstone who are available in the system</p>
+                  
+                  <a class="btn btn-primary" (click)="loadGem()">List All</a>
+              </div>
+          </div>
+          <div class="card" style="width:400px">
+              <img class="card-img-top mt-5  icon" src="/assets/gemimg4.jpeg" alt="Card image">
+              <div class="card-body text-center">
+                  <h4 class="card-title">Add New Gemstone</h4>
+                  <p class="card-text">Add new gemstone item in the system with item data</p>
+                  <a  class="btn btn-primary" [routerLink]="['/gemstone',10]">Create</a>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
