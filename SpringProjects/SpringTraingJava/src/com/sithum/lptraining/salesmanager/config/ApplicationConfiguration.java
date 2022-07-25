@@ -8,7 +8,7 @@ import org.springframework.context.annotation.Configuration;
 import com.sithum.lptraining.salesmanager.service.EmployeeService;
 
 @Configuration
-@ComponentScan("com.ashfak")
+@ComponentScan("com.sithum")
 public class ApplicationConfiguration {
 
 	@Bean(name = "employeeService")

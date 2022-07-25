@@ -7,11 +7,11 @@
     <!-- bean definitions here -->
     
     <bean name="employeeRepository"
-	class="com.ashfak.training.salesmanager.repository.HibernateEmployeeRepositoryImpl"/>
+	class="com.sithum.training.salesmanager.repository.HibernateEmployeeRepositoryImpl"/>
 	
 	
 	<bean name="employeeService"
-	class="com.ashfak.training.salesmanager.service.EmployeeServiceImpl" autowire="constructor">
+	class="com.sithum.training.salesmanager.service.EmployeeServiceImpl" autowire="constructor">
 <!-- 	<property name="employeeRepository" ref="employeeRepository"></property> -->
 <!-- 	<constructor-arg index="0" ref="employeeRepository"></constructor-arg> -->
 	</bean>
