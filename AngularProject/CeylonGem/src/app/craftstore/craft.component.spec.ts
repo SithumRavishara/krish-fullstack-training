@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { GemstoneComponent } from './gemstone.component';
+import { CraftComponent } from './craft.component';
 
-describe('GemstoneComponent', () => {
-  let component: GemstoneComponent;
-  let fixture: ComponentFixture<GemstoneComponent>;
+describe('CraftsComponent', () => {
+  let component: CraftComponent;
+  let fixture: ComponentFixture<CraftComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ GemstoneComponent ]
+      declarations: [ CraftComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(GemstoneComponent);
+    fixture = TestBed.createComponent(CraftComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

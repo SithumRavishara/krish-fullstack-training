@@ -1,22 +1,22 @@
 import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { Observable } from "rxjs";
-import { Gemstone } from "../gemstone/Gem.model";
+import { Crafts } from "../craftstore/Craft.model";
 
 @Injectable({
     providedIn: 'root'
 })
 export class HttpService {
 
-    private employeeUrl: string = 'http://localhost:3000/gemstone'
+    private employeeUrl: string = 'http://localhost:3000/Crafts'
 
     constructor(private http: HttpClient) {
 
     }
 
-    getAllGemstone(): Observable<Gemstone[]> {
+    getAllCrafts(): Observable<Crafts[]> {
 
-        return this.http.get<Gemstone[]>(this.employeeUrl)
+        return this.http.get<Crafts[]>(this.employeeUrl)
 
     }
 

@@ -13,7 +13,7 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void { }
 
   loadGem() {
-    this.router.navigate(['/gemstone'])
+    this.router.navigate(['/Crafts'])
   }
-  
+
 }

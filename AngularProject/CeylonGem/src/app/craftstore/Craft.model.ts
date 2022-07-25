@@ -1,4 +1,4 @@
-export interface Gemstone{
+export interface Crafts{
     id: string
     firstName: string
     lastName: string

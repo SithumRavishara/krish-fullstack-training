@@ -15,7 +15,7 @@ export class CreateGemGuard implements CanActivate {
     let depId: number = Number(route.paramMap.get("id"));
 
     if (depId % 2 == 0) {
-      alert('you are not authorized to create newgemstone here')
+      alert('you are not authorized to create newCrafts here')
       this.router.navigate(["/home"])
     }
     return true;
