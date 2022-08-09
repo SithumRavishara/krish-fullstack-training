@@ -1,0 +1,61 @@
+<ul>
+    <li><a class="active" href="#home"><img src="\assets\images\logo.jpg" alt="Ceypetco"></a></li>
+    <!-- <li><a href="#news">News</a></li> -->
+    <h1 id="title">Ceylon Petroleum Coporation</h1>
+    <li style="float:right" id="abt"><a href="#about">About</a></li>
+</ul>
+
+<div class="direct">
+    <p class="rut"><a routerLink="/dashboard"> Dashboard </a> ⥂ <a routerLink="/placeorder"> Order Request </a></p>
+</div>
+
+<div>
+    <h1 id="re-form-head">Place an Order Now </h1>
+    <form class="example-form" id="re-form">
+
+        <mat-form-field class="example-full-width" appearance="fill">
+          <mat-label>Gas Station Name</mat-label>
+          <input type="text" matInput [formControl]="nameFormControl" placeholder="Ex. Saptara Filling Station">
+          
+          <mat-error *ngIf="nameFormControl.hasError('required')">
+            Name is <strong>required</strong>
+          </mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Gas Station ID</mat-label>
+            <input type="text" matInput [formControl]="idFormControl" placeholder="CPC00001">
+            
+            <mat-error *ngIf="idFormControl.hasError('required')">
+              ID is <strong>required</strong>
+            </mat-error>
+          </mat-form-field>
+
+          <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Capacity</mat-label>
+            <mat-select>
+              <mat-option value="option">6500 Liter</mat-option>
+              <mat-option value="option">13000 Liter</mat-option>
+            </mat-select> 
+            <mat-hint align="end">Here's the dropdown arrow ^</mat-hint>
+          </mat-form-field>
+
+          <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Fuel Type</mat-label>
+            <mat-select>
+              <mat-option value="option">Petrol</mat-option>
+              <mat-option value="option">Diesel</mat-option>
+            </mat-select> 
+            <mat-hint align="end">Here's the dropdown arrow ^</mat-hint>
+          </mat-form-field>
+      </form>
+
+      
+      <button mat-raised-button id="sbt">Submit</button>
+</div>
+
+
+<div class="bottom">
+    <p class="bhead">Copyright © Ceylon Petroleum Coporation PLC. All rights reserved.</p>
+    <p class="bsub">Solution by A S Ravishara</p>
+</div>

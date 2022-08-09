@@ -1,0 +1,76 @@
+<ul>
+  <li><a class="active" href="#home"><img src="\assets\images\logo.jpg" alt="Ceypetco"></a></li>
+  <!-- <li><a href="#news">News</a></li> -->
+  <h1 id="title">Ceylon Petroleum Coporation</h1>
+  <li style="float:right" id="abt"><a href="#about" id="portal">About</a></li>
+  <li style="float:right" id="prt"><a routerLink="/orderlog" id="portal">Staff Portal</a></li>
+</ul>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-6" id="block1" >
+        <mat-card class="Fuel-balance-card">
+            <div class="row">
+                <div class="col-sm-9" id="mat1block1" >
+                    <mat-card-title class="title">Avialable Fuel Stock</mat-card-title>
+                    <mat-card-subtitle class="sub">Sapugaskanda Central Terminal</mat-card-subtitle>
+                    <mat-card-content>
+                        <p id="fb">{{fuelbalance}}</p>
+                    </mat-card-content>
+                </div>
+                <div class="col-sm-3" id="mat1block2">
+                    <a class="plusbtn" href="#">
+                        <img src="\assets\images\arrow.png">
+                    </a>
+                </div>
+            </div>
+        </mat-card>
+        <mat-card id="ordercard" routerLink="/placeorder">
+                <p id="oword">Place an Order</p>
+        </mat-card>
+    </div>
+    <div class="col-sm-6" id="block2" >
+        <mat-card class="Fuel-clients-card">
+            <div class="row">
+                <div class="col-sm-9" id="mat2block1">
+                    <mat-card-title class="title">Consumer Requests</mat-card-title>
+                    <mat-card-subtitle class="sub">Number of Fuel Stations</mat-card-subtitle>
+                    <mat-card-content>
+                        <p id="nr">{{numberOfRequests}}</p>
+                    </mat-card-content>
+                </div>
+                <div class="col-sm-3" id="mat2block2" >
+                    <a class="plusbtn" href="#">
+                        <img src="\assets\images\arrow.png">
+                    </a>
+                </div>
+            </div>
+        </mat-card>
+        <mat-card id="trackcard" routerLink="/ordertracker">
+            <p id="tword">Track Your Order</p>
+        </mat-card>
+    </div>
+  </div>
+</div>
+
+<!-- <div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-6" id="blocko1" >
+            <mat-card class="ordercard">
+                
+            </mat-card>
+        </div>
+        <div class="col-sm-6" id="blockt2" >
+            <mat-card class="trackcard">
+                
+            </mat-card>
+        </div>
+      </div>
+</div> -->
+
+<div class="bottom">
+   <p class="bhead">Copyright © Ceylon Petroleum Coporation PLC. All rights reserved.</p>
+    <p class="bsub">Solution by A S Ravishara</p>
+</div>
+
+

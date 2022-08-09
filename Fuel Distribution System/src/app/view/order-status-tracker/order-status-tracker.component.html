@@ -1,0 +1,68 @@
+<ul>
+    <li><a class="active" href="#home"><img src="\assets\images\logo.jpg" alt="Ceypetco"></a></li>
+    <!-- <li><a href="#news">News</a></li> -->
+    <h1 id="title">Ceylon Petroleum Coporation</h1>
+    <li style="float:right" id="abt"><a href="#about">About</a></li>
+</ul>
+
+<div class="direct">
+    <p class="rut"><a routerLink="/dashboard"> Dashboard </a> ⥂ <a routerLink="/ordertracker"> Order Tracker</a></p>
+</div>
+
+
+<div>
+    <h1 id="re-form-head">Track Your Order </h1>
+    <form class="example-form" id="re-form">
+        <mat-form-field class="example-full-width" appearance="fill">
+          <mat-label>Order Reference ID</mat-label>
+          <input type="text" matInput [formControl]="nameFormControl" placeholder="Ex. OD00001">
+          
+          <mat-error *ngIf="nameFormControl.hasError('required')">
+            Reference ID is <strong>required</strong>
+          </mat-error>
+        </mat-form-field>
+    </form>
+
+    <button mat-raised-button id="sbt">Search</button>
+
+</div>
+
+<div>
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+        <!--- Note that these columns can be defined in any order.
+              The actual rendered columns are set as a property on the row definition" -->
+      
+        <!-- Position Column -->
+        <ng-container matColumnDef="id">
+          <th mat-header-cell *matHeaderCellDef> Ref. ID </th>
+          <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+        </ng-container>
+      
+        <!-- Name Column -->
+        <ng-container matColumnDef="capacity">
+          <th mat-header-cell *matHeaderCellDef> Capacity </th>
+          <td mat-cell *matCellDef="let element"> {{element.capacity}} </td>
+        </ng-container>
+      
+        <!-- Weight Column -->
+        <ng-container matColumnDef="type">
+          <th mat-header-cell *matHeaderCellDef> Fuel Type </th>
+          <td mat-cell *matCellDef="let element"> {{element.type}} </td>
+        </ng-container>
+      
+        <!-- Symbol Column -->
+        <ng-container matColumnDef="status">
+          <th mat-header-cell *matHeaderCellDef> Status </th>
+          <td mat-cell *matCellDef="let element"> {{element.status}} </td>
+        </ng-container>
+      
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+</div>
+
+<div class="bottom">
+    <p class="bhead">Copyright © Ceylon Petroleum Coporation PLC. All rights reserved.</p>
+    <p class="bsub">Solution by A S Ravishara</p>
+</div>
